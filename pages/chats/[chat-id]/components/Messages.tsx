@@ -50,7 +50,7 @@ function MessagesView(props: Props) {
 
   return (
     <div className="w-full h-full flex-col justify-between overflow-y-scroll">
-      <div className="mb-32 flex flex-col w-full h-full overflow-y-scroll">
+      <div className="mb-32 flex flex-col w-full h-full overflow-y-scroll pl-3 pr-3">
         {messages.map((message) => (
           <div
             key={message.id}
