@@ -105,7 +105,6 @@ function Chat() {
 
       <div className="relative w-full h-48">
         <textarea
-          type="text"
           placeholder="Введите текст"
           value={message}
           onChange={handleChange}
