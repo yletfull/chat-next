@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Chat from '@/app/home/page'
+import Chat from '@/pages/chats/[chat-id]/index'
 
 export default function Home() {
   return (

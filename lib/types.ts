@@ -1,0 +1,16 @@
+export enum Users {
+  User = 'user',
+  Interlocutor = 'interlocutor',
+}
+
+export interface Message {
+  sender: Users;
+  content: string;
+  id: number;
+}
+
+export interface ActiveMessage {
+  id: number | null;
+  top: number;
+  left: number;
+}
