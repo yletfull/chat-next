@@ -2,7 +2,7 @@
 import React, { ChangeEvent, KeyboardEvent, useEffect, useState } from 'react';
 import { Message, Users} from "@/lib/types";
 import MessagesView from "@/pages/chats/[chat-id]/components/Messages";
-import {defaultMessages} from "@/pages/chats/[chat-id]/mocks";
+import {defaultMessages} from "@/lib/mocks/messages";
 import InputView from "@/pages/chats/[chat-id]/components/Input";
 
 function ChatView() {
