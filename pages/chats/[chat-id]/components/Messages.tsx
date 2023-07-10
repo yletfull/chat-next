@@ -49,8 +49,8 @@ function MessagesView(props: Props) {
   };
 
   return (
-    <div className="w-full h-full flex-col justify-between">
-      <div className="mb-32 flex flex-col w-full h-full">
+    <div className="w-full h-full flex-col justify-between overflow-y-scroll">
+      <div className="mb-32 flex flex-col w-full h-full overflow-y-scroll">
         {messages.map((message) => (
           <div
             key={message.id}
@@ -60,12 +60,12 @@ function MessagesView(props: Props) {
             onClick={(e) => handleContextMenu(e, message.id)}
           >
             <div
-              className={`relative rounded-lg border border-transparent px-5 py-5 transition-colors ${
+              className={`relative rounded-lg border border-transparent px-5 py-5 mb-2 transition-colors ${
                 message.sender === 'user' ? 'bg-gray-100 text-right' : 'bg-gray-200 text-left'
               } hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30`}
             >
               <p className="m-0 text-sm opacity-70">{message.content}</p>
-              <p className="absolute right-0 -bottom-5 m-0 text-xs opacity-70 font-thin">{dayjs(message?.date || null).format('DD.MM.YYYY HH:MM:ss')}</p>
+              <p className="absolute right-0 -bottom-5 text-xs opacity-70 font-thin">{dayjs(message?.date || null).format('DD.MM.YYYY HH:MM:ss')}</p>
             </div>
           </div>
         ))}

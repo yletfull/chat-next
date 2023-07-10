@@ -7,6 +7,7 @@ export interface Message {
   sender: Users;
   content: string;
   id: number;
+  date: Date;
 }
 
 export interface ActiveMessage {
